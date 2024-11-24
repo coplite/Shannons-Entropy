@@ -42,5 +42,5 @@ int main()
         shannons -= (x[1] / (double)length) * (log2((x[1] / (double)length)));
     }
     std::cout << "Entropy: " << shannons << "\n";
-    std::cout << "Likeliness of packing is: " << (shannons/8.00)*100 << "%\n";
+    std::cout << "Likeliness of packing is: " << (shannons/8.00)*100 << "%\n"; // 8.00 is used because its the highest value the function outputs
 }
