@@ -5,7 +5,7 @@
 
 int main()
 {
-    int distribution[256][2] = {0};
+    int distribution[256][2] = {0}; // 2d array
     double shannons = 0.00;
     std::string FileName;
     for(int i = 0; i < 256; ++i)
@@ -32,7 +32,7 @@ int main()
     file.close();
 
     std::cout << "Length: " << length << "\n";
-    for(int (&x)[2] : distribution)
+    for(int (&x)[2] : distribution) // iterates over 2d array by iterating over the array of arrays of 2
     {
         std::cout << x[0] << ": " << x[1] << " --> "<< -(x[1] / (double)length) * (log2((x[1] / (double)length))) << "\n";
         if(x[1] == 0)
